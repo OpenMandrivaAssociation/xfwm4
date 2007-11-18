@@ -6,12 +6,6 @@ License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://www.xfce.org
 Source0:	%{name}-%{version}.tar.bz2
-Patch0:		%{name}-4.4.1-fix-typo.patch
-Patch2:		%{name}-4.4.1-fix-memleak.patch
-# (tpg) http://bugzilla.xfce.org/show_bug.cgi?id=3346
-Patch3:		%{name}-4.4.1-gtk2.patch
-# (tpg) http://bugzilla.xfce.org/show_bug.cgi?id=3296
-Patch4:		%{name}-4.4.1-fix-transient-windows.patch
 Requires:	xfce-mcs-manager >= %{version}
 BuildRequires:	xfce-mcs-manager-devel >= %{version}
 BuildRequires:	libgdk_pixbuf2.0-devel
@@ -33,10 +27,6 @@ dialog for advanced tweaks.
 
 %prep
 %setup -q
-%patch0 -p0 -b .typo
-%patch2 -p1 -b .memleak
-%patch3 -p1 -b .gtk2
-%patch4 -p1 -b .windows
 
 %build
 %configure2_5x \

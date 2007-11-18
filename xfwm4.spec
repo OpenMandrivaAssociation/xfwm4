@@ -1,7 +1,7 @@
 Summary:	Window manager for Xfce
 Name:		xfwm4
-Version: 	4.4.1
-Release:	%mkrel 10
+Version: 	4.4.2
+Release:	%mkrel 1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://www.xfce.org
@@ -22,13 +22,13 @@ Obsoletes:	xfwm
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
-The Xfce 4 window manager manages the placement of application 
-windows on the screen, provides beautiful window decorations, 
-manages workspaces or virtual desktops, and natively supports 
+The Xfce 4 window manager manages the placement of application
+windows on the screen, provides beautiful window decorations,
+manages workspaces or virtual desktops, and natively supports
 multiscreen mode. It provides its own compositing manager (
-from the Xorg Composite extension) for true transparency and shadows. 
-The Xfce 4 window manager includes a keyboard shorcuts editor for user 
-specific commands and basic windows manipulations, and it provides a 
+from the Xorg Composite extension) for true transparency and shadows.
+The Xfce 4 window manager includes a keyboard shorcuts editor for user
+specific commands and basic windows manipulations, and it provides a
 dialog for advanced tweaks.
 
 %prep

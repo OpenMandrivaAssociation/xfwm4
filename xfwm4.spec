@@ -58,7 +58,7 @@ rm -rf %{buildroot}
 
 %files -f %{name}.lang
 %defattr(-,root,root)
-%doc example.gtkrc-2.0 AUTHORS COMPOSITOR COPYING README TODO
+%doc example.gtkrc-2.0 AUTHORS COMPOSITOR README TODO
 %{_bindir}/xfwm4
 %{_libdir}/xfce4/mcs-plugins/*
 %{_datadir}/applications/*

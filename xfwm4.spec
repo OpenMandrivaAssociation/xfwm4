@@ -13,7 +13,6 @@ BuildRequires:	libxcomposite-devel
 BuildRequires:	libxdamage-devel
 BuildRequires:	startup-notification-devel
 Obsoletes:	xfwm
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 The Xfce 4 window manager manages the placement of application

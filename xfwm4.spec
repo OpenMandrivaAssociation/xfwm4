@@ -1,17 +1,18 @@
 Summary:	Window manager for Xfce
 Name:		xfwm4
 Version: 	4.4.2
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://www.xfce.org
 Source0:	%{name}-%{version}.tar.bz2
-Requires:	xfce-mcs-manager >= %{version}
+Patch0:		%{name}-4.4.2-awn-focus.patch
 BuildRequires:	xfce-mcs-manager-devel >= %{version}
 BuildRequires:	libgdk_pixbuf2.0-devel
 BuildRequires:	libxcomposite-devel
 BuildRequires:	libxdamage-devel
 BuildRequires:	startup-notification-devel
+Requires:	xfce-mcs-manager >= %{version}
 Obsoletes:	xfwm
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
@@ -27,6 +28,7 @@ dialog for advanced tweaks.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %configure2_5x \

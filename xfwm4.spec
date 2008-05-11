@@ -1,7 +1,7 @@
 Summary:	Window manager for Xfce
 Name:		xfwm4
 Version: 	4.4.2
-Release:	%mkrel 2
+Release:	%mkrel 3
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://www.xfce.org
@@ -32,7 +32,9 @@ dialog for advanced tweaks.
 
 %build
 %configure2_5x \
+%if %mdkversion < 200900
 	--sysconfdir=%{_sysconfdir}/X11 \
+%endif
 	--enable-compositor \
 	--enable-xsync \
 	--enable-render \

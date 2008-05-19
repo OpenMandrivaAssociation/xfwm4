@@ -6,11 +6,11 @@ License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://www.xfce.org
 Source0:	%{name}-%{version}.tar.bz2
-Patch0:		%{name}-4.4.2-awn-focus.patch
-Patch1:		%{name}-4.4.2-filter-ungrab-events.patch
-Patch2:		%{name}-4.4.2-exit-on-selectionclear.patch
-Patch3:		%{name}-4.4.2-fix-compositing-overlay.patch
-Patch4:		%{name}-4.4.2-fix-automaximize-on-move.patch
+Patch0:		%{name}-4.4.2-filter-ungrab-events.patch
+Patch1:		%{name}-4.4.2-exit-on-selectionclear.patch
+Patch2:		%{name}-4.4.2-fix-compositing-overlay.patch
+Patch3:		%{name}-4.4.2-fix-automaximize-on-move.patch
+Patch4:		%{name}-4.4.2-awn-focus.patch
 BuildRequires:	xfce-mcs-manager-devel >= %{version}
 BuildRequires:	libgdk_pixbuf2.0-devel
 BuildRequires:	libxcomposite-devel

@@ -1,12 +1,16 @@
-Summary:	Window manager for Xfce
+Summary:	Window manager for Xfce desktop environment
 Name:		xfwm4
 Version: 	4.4.2
-Release:	%mkrel 3
+Release:	%mkrel 4
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://www.xfce.org
 Source0:	%{name}-%{version}.tar.bz2
 Patch0:		%{name}-4.4.2-awn-focus.patch
+Patch1:		%{name}-4.4.2-filter-ungrab-events.patch
+Patch2:		%{name}-4.4.2-exit-on-selectionclear.patch
+Patch3:		%{name}-4.4.2-fix-compositing-overlay.patch
+Patch4:		%{name}-4.4.2-fix-automaximize-on-move.patch
 BuildRequires:	xfce-mcs-manager-devel >= %{version}
 BuildRequires:	libgdk_pixbuf2.0-devel
 BuildRequires:	libxcomposite-devel
@@ -29,6 +33,10 @@ dialog for advanced tweaks.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
+%patch2 -p1
+%patch3 -p1
+%patch4 -p1
 
 %build
 %configure2_5x \

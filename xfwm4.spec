@@ -1,22 +1,19 @@
 Summary:	Window manager for Xfce desktop environment
 Name:		xfwm4
-Version: 	4.4.2
-Release:	%mkrel 5
+Version: 	4.5.91
+Release:	%mkrel 1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://www.xfce.org
 Source0:	%{name}-%{version}.tar.bz2
-Patch0:		%{name}-4.4.2-filter-ungrab-events.patch
-Patch1:		%{name}-4.4.2-exit-on-selectionclear.patch
-Patch2:		%{name}-4.4.2-fix-compositing-overlay.patch
-Patch3:		%{name}-4.4.2-fix-automaximize-on-move.patch
-Patch4:		%{name}-4.4.2-awn-focus.patch
-BuildRequires:	xfce-mcs-manager-devel >= %{version}
 BuildRequires:	libgdk_pixbuf2.0-devel
 BuildRequires:	libxcomposite-devel
 BuildRequires:	libxdamage-devel
 BuildRequires:	startup-notification-devel
-Requires:	xfce-mcs-manager >= %{version}
+BuildRequires:	libxfcegui4-devel
+BuildRequires:	xfconf-devel
+BuildRequires:	libglade2-devel
+BuildRequires:	libwnck-devel
 Obsoletes:	xfwm
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
@@ -32,11 +29,6 @@ dialog for advanced tweaks.
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p1
-%patch2 -p1
-%patch3 -p1
-%patch4 -p1
 
 %build
 %configure2_5x \
@@ -75,8 +67,9 @@ rm -rf %{buildroot}
 %files -f %{name}.lang
 %defattr(-,root,root)
 %doc example.gtkrc-2.0 AUTHORS COMPOSITOR README TODO
-%{_bindir}/xfwm4
-%{_libdir}/xfce4/mcs-plugins/*
+%dir %{_libdir}/xfce4/xfwm4
+%{_bindir}/xfwm4*
+%{_libdir}/xfce4/xfwm4/helper-dialog
 %{_datadir}/applications/*
 %{_iconsdir}/hicolor/*
 %{_datadir}/themes/*

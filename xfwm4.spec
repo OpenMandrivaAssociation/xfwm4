@@ -1,6 +1,6 @@
 Summary:	Window manager for Xfce desktop environment
 Name:		xfwm4
-Version: 	4.5.91
+Version: 	4.5.92
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
@@ -10,8 +10,8 @@ BuildRequires:	libgdk_pixbuf2.0-devel
 BuildRequires:	libxcomposite-devel
 BuildRequires:	libxdamage-devel
 BuildRequires:	startup-notification-devel
-BuildRequires:	libxfcegui4-devel
-BuildRequires:	xfconf-devel
+BuildRequires:	libxfcegui4-devel >= %{version}
+BuildRequires:	xfconf-devel >= %{version}
 BuildRequires:	libglade2-devel
 BuildRequires:	libwnck-devel
 Obsoletes:	xfwm
@@ -39,6 +39,7 @@ dialog for advanced tweaks.
 	--enable-xsync \
 	--enable-render \
 	--enable-randr \
+	--enable-startup-notification \
 	--disable-static
 %make
 

@@ -1,6 +1,6 @@
 Summary:	Window manager for Xfce desktop environment
 Name:		xfwm4
-Version: 	4.5.92
+Version: 	4.5.93
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce

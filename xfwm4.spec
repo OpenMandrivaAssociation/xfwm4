@@ -1,7 +1,7 @@
 Summary:	Window manager for Xfce desktop environment
 Name:		xfwm4
 Version: 	4.6.0
-Release:	%mkrel 3
+Release:	%mkrel 4
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://www.xfce.org
@@ -12,6 +12,7 @@ Patch2:		xfwm4-4.6.0-reduce-minimum-timeout-for-focus-delay-in-focus-follow-mous
 Patch3:		xfwm4-4.6.0-regrab-the-mouse-on-parent-window.patch
 Patch4:		xfwm4-4.6.0-do-not-not-fill-over-adjacent-windows.patch
 Patch5:		xfwm4-4.6.0-keep-window-layer-when-status-is-above-below-or-fullscreen.patch
+Patch6:		xfwm4-4.6.0-check-fullscreen-status-against-each-monitor.patch
 BuildRequires:	libgdk_pixbuf2.0-devel
 BuildRequires:	libxcomposite-devel
 BuildRequires:	libxdamage-devel
@@ -41,6 +42,7 @@ dialog for advanced tweaks.
 %patch3 -p1
 %patch4 -p1
 %patch5 -p1
+%patch6 -p1
 
 %build
 %configure2_5x \

@@ -1,24 +1,17 @@
 Summary:	Window manager for Xfce desktop environment
 Name:		xfwm4
-Version: 	4.6.0
-Release:	%mkrel 4
+Version: 	4.6.1
+Release:	%mkrel 1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://www.xfce.org
 Source0:	http://www.xfce.org/archive/xfce-%{version}/src/%{name}-%{version}.tar.bz2
-Patch0:		xfwm4-4.6.0-reduce-repaint-timeout-in-the-compositor.patch
-Patch1:		xfwm4-4.6.0-check-for-nil-timestamp-regardless-of-focus-stealing-prevention-setting.patch
-Patch2:		xfwm4-4.6.0-reduce-minimum-timeout-for-focus-delay-in-focus-follow-mouse.patch
-Patch3:		xfwm4-4.6.0-regrab-the-mouse-on-parent-window.patch
-Patch4:		xfwm4-4.6.0-do-not-not-fill-over-adjacent-windows.patch
-Patch5:		xfwm4-4.6.0-keep-window-layer-when-status-is-above-below-or-fullscreen.patch
-Patch6:		xfwm4-4.6.0-check-fullscreen-status-against-each-monitor.patch
 BuildRequires:	libgdk_pixbuf2.0-devel
 BuildRequires:	libxcomposite-devel
 BuildRequires:	libxdamage-devel
 BuildRequires:	startup-notification-devel
-BuildRequires:	libxfcegui4-devel >= %{version}
-BuildRequires:	xfconf-devel >= %{version}
+BuildRequires:	libxfcegui4-devel >= 4.6.0
+BuildRequires:	xfconf-devel >= 4.6.0
 BuildRequires:	libglade2-devel
 BuildRequires:	libwnck-devel
 Obsoletes:	xfwm
@@ -36,13 +29,6 @@ dialog for advanced tweaks.
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p1
-%patch2 -p1
-%patch3 -p1
-%patch4 -p1
-%patch5 -p1
-%patch6 -p1
 
 %build
 %configure2_5x \

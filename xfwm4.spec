@@ -1,17 +1,19 @@
+%define url_ver %(echo %{version} | cut -c 1-3)
+
 Summary:	Window manager for Xfce desktop environment
 Name:		xfwm4
-Version: 	4.6.2
+Version: 	4.7.0
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://www.xfce.org
-Source0:	http://www.xfce.org/archive/xfce-%{version}/src/%{name}-%{version}.tar.bz2
+Source0:	http://archive.xfce.org/src/xfce/%{name}/%{url_ver}/%{name}-%{version}.tar.bz2
 BuildRequires:	libgdk_pixbuf2.0-devel
 BuildRequires:	libxcomposite-devel
 BuildRequires:	libxdamage-devel
 BuildRequires:	startup-notification-devel
-BuildRequires:	libxfcegui4-devel >= 4.6.0
-BuildRequires:	xfconf-devel >= 4.6.0
+BuildRequires:	libxfce4ui-devel >= 4.7.0
+BuildRequires:	xfconf-devel >= 4.7.0
 BuildRequires:	libglade2-devel
 BuildRequires:	libwnck-devel
 Obsoletes:	xfwm
@@ -75,4 +77,3 @@ rm -rf %{buildroot}
 %{_iconsdir}/hicolor/*
 %{_datadir}/themes/*
 %{_datadir}/xfwm4
-%{_datadir}/xfce4/doc

@@ -3,7 +3,7 @@
 Summary:	Window manager for Xfce desktop environment
 Name:		xfwm4
 Version: 	4.8.1
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://www.xfce.org

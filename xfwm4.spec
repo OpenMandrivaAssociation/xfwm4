@@ -14,7 +14,7 @@ BuildRequires:	libxdamage-devel
 BuildRequires:	startup-notification-devel
 BuildRequires:	libxfce4ui-devel >= 4.7.5
 BuildRequires:	xfconf-devel >= 4.7.0
-BuildRequires:	libglade2-devel
+BuildRequires:	libglade2.0-devel
 BuildRequires:	libwnck-devel
 Obsoletes:	xfwm
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot

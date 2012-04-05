@@ -2,8 +2,8 @@
 
 Summary:	Window manager for Xfce desktop environment
 Name:		xfwm4
-Version: 	4.8.3
-Release:	%mkrel 1
+Version: 	4.9.0
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://www.xfce.org
@@ -12,8 +12,8 @@ BuildRequires:	libgdk_pixbuf2.0-devel
 BuildRequires:	libxcomposite-devel
 BuildRequires:	libxdamage-devel
 BuildRequires:	startup-notification-devel
-BuildRequires:	libxfce4ui-devel >= 4.7.5
-BuildRequires:	xfconf-devel >= 4.7.0
+BuildRequires:	libxfce4ui-devel >= 4.9.1
+BuildRequires:	xfconf-devel >= 4.9.0
 BuildRequires:	libglade2.0-devel
 BuildRequires:	libwnck-devel
 Obsoletes:	xfwm
@@ -34,41 +34,21 @@ dialog for advanced tweaks.
 
 %build
 %configure2_5x \
-%if %mdkversion < 200900
-	--sysconfdir=%{_sysconfdir}/X11 \
-%endif
 	--enable-compositor \
 	--enable-xsync \
 	--enable-render \
 	--enable-randr \
 	--enable-startup-notification \
 	--disable-static
+
 %make
 
 %install
-rm -rf %{buildroot}
-
 %makeinstall_std
 
-%find_lang %{name}
-
-%clean
-rm -rf %{buildroot}
-
-%if %mdkversion < 200900
-%post
-%{update_menus}
-%update_icon_cache hicolor
-%endif
-
-%if %mdkversion < 200900
-%postun
-%{clean_menus}
-%clean_icon_cache hicolor
-%endif
+%find_lang %{name} %{name}.lang
 
 %files -f %{name}.lang
-%defattr(-,root,root)
 %doc example.gtkrc-2.0 AUTHORS COMPOSITOR README TODO
 %dir %{_libdir}/xfce4/xfwm4
 %{_bindir}/xfwm4*

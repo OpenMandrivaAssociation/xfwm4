@@ -1,9 +1,9 @@
-%define url_ver %(echo %{version} | cut -c 1-3)
+%define url_ver %(echo %{version} | cut -c 1-4)
 
 Summary:	Window manager for Xfce desktop environment
 Name:		xfwm4
-Version: 	4.10.0
-Release:	2
+Version: 	4.10.1
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://www.xfce.org

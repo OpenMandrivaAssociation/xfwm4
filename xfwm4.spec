@@ -3,7 +3,7 @@
 Summary:	Window manager for Xfce desktop environment
 Name:		xfwm4
 Version: 	4.11.2
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://www.xfce.org

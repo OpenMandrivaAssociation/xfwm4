@@ -2,8 +2,8 @@
 
 Summary:	Window manager for Xfce desktop environment
 Name:		xfwm4
-Version: 	4.11.1
-Release:	1
+Version: 	4.12.0
+Release:	0.1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://www.xfce.org
@@ -12,8 +12,8 @@ BuildRequires:	pkgconfig(gdk-pixbuf-2.0)
 BuildRequires:	pkgconfig(xcomposite)
 BuildRequires:	pkgconfig(xdamage)
 BuildRequires:	pkgconfig(libstartup-notification-1.0)
-BuildRequires:	pkgconfig(libxfce4ui-1) >= 4.11
-BuildRequires:	pkgconfig(libxfconf-0) >= 4.10
+BuildRequires:	pkgconfig(libxfce4ui-1) >= 4.12
+BuildRequires:	pkgconfig(libxfconf-0) >= 4.12
 BuildRequires:	pkgconfig(libglade-2.0)
 BuildRequires:	pkgconfig(libwnck-1.0)
 Obsoletes:	xfwm

@@ -2,8 +2,8 @@
 
 Summary:	Window manager for Xfce desktop environment
 Name:		xfwm4
-Version: 	4.12.0
-Release:	0.1
+Version: 	4.12.2
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://www.xfce.org
@@ -32,7 +32,7 @@ dialog for advanced tweaks.
 %setup -q
 
 %build
-%configure2_5x \
+%configure \
 	--enable-compositor \
 	--enable-xsync \
 	--enable-render \

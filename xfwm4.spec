@@ -1,13 +1,14 @@
-%define url_ver %(echo %{version} | cut -c 1-4)
+%define url_ver %(echo %{version} | cut -d. -f1,2)
+%define _disable_rebuild_configure 1
 
 Summary:	Window manager for Xfce desktop environment
 Name:		xfwm4
-Version: 	4.12.2
+Version: 	4.12.4
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://www.xfce.org
-Source0:	http://archive.xfce.org/src/xfce/xfwm4/4.11/%{name}-%{version}.tar.bz2
+Source0:	http://archive.xfce.org/src/xfce/xfwm4/%{url_ver}/%{name}-%{version}.tar.bz2
 BuildRequires:	pkgconfig(gdk-pixbuf-2.0)
 BuildRequires:	pkgconfig(xcomposite)
 BuildRequires:	pkgconfig(xdamage)

@@ -1,3 +1,4 @@
----
-sources:
+removed_sources:
   xfwm4-4.12.2.tar.bz2: fb9e9bd6f8a5e1838933355565b92cd40941b90b
+sources:
+  xfwm4-4.12.4.tar.bz2: d1019cce2a2f7978e36cb30fdc0f27cf9f626244

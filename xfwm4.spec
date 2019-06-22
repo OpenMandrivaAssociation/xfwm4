@@ -3,8 +3,8 @@
 
 Summary:	Window manager for Xfce desktop environment
 Name:		xfwm4
-Version: 	4.12.4
-Release:	1
+Version: 	4.12.5
+Release:	2
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://www.xfce.org
@@ -29,25 +29,6 @@ The Xfce 4 window manager includes a keyboard shorcuts editor for user
 specific commands and basic windows manipulations, and it provides a
 dialog for advanced tweaks.
 
-%prep
-%setup -q
-
-%build
-%configure \
-	--enable-compositor \
-	--enable-xsync \
-	--enable-render \
-	--enable-randr \
-	--enable-startup-notification \
-	--disable-static
-
-%make
-
-%install
-%makeinstall_std
-
-%find_lang %{name} %{name}.lang
-
 %files -f %{name}.lang
 %doc example.gtkrc-2.0 AUTHORS COMPOSITOR README TODO
 %dir %{_libdir}/xfce4/xfwm4
@@ -57,3 +38,25 @@ dialog for advanced tweaks.
 %{_iconsdir}/hicolor/*
 %{_datadir}/themes/*
 %{_datadir}/xfwm4
+
+#---------------------------------------------------------------------------
+
+%prep
+%setup -q
+%autopatch -p1
+
+%build
+%configure \
+	--enable-compositor \
+	--enable-xsync \
+	--enable-render \
+	--enable-randr \
+	--enable-startup-notification \
+	%{nil}
+%make_build
+
+%install
+%make_install
+
+# locales
+%find_lang %{name} %{name}.lang

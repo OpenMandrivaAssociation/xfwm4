@@ -53,7 +53,6 @@ dialog for advanced tweaks.
 %autopatch -p1
 
 %build
-%xdt_autogen
 %configure \
 	--enable-compositor \
 	--enable-xsync \

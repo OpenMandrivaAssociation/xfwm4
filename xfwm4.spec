@@ -40,7 +40,7 @@ specific commands and basic windows manipulations, and it provides a
 dialog for advanced tweaks.
 
 %files -f %{name}.lang
-%doc example.gtkrc-2.0 AUTHORS COMPOSITOR README TODO
+%doc example.gtkrc-2.0 AUTHORS COMPOSITOR TODO
 %dir %{_libdir}/xfce4/xfwm4
 %{_bindir}/xfwm4*
 %{_libdir}/xfce4/xfwm4/helper-dialog

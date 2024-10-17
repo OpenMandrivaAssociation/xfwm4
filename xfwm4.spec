@@ -7,7 +7,7 @@ Version: 	4.18.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
-URL:		http://www.xfce.org
+URL:		https://www.xfce.org
 Source0:	http://archive.xfce.org/src/xfce/xfwm4/%{url_ver}/%{name}-%{version}.tar.bz2
 
 BuildRequires:	intltool

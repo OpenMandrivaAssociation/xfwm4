@@ -3,12 +3,12 @@
 
 Summary:	Window manager for Xfce desktop environment
 Name:		xfwm4
-Version: 	4.18.0
+Version: 	4.20.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		https://www.xfce.org
-Source0:	http://archive.xfce.org/src/xfce/xfwm4/%{url_ver}/%{name}-%{version}.tar.bz2
+Source0:	https://archive.xfce.org/src/xfce/xfwm4/%{url_ver}/%{name}-%{version}.tar.bz2
 
 BuildRequires:	intltool
 BuildRequires:	pkgconfig(dbus-1)
@@ -52,8 +52,7 @@ dialog for advanced tweaks.
 #---------------------------------------------------------------------------
 
 %prep
-%setup -q
-%autopatch -p1
+%autosetup -p1
 
 %build
 %configure \
@@ -62,7 +61,8 @@ dialog for advanced tweaks.
 	--enable-render \
 	--enable-randr \
 	--enable-startup-notification \
-	%{nil}
+ 	--enable-xi2
+
 %make_build
 
 %install
